@@ -53,6 +53,11 @@ button,
   color: $lightGrayishBlue;
   font-size: $font-sm;
   font-weight: 700;
+  transition: opacity 300ms ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 //Visibility

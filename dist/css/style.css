@@ -61,6 +61,13 @@ button,
   color: #f3f4f6;
   font-size: 0.875rem;
   font-weight: 700;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+button:hover,
+.button:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 63.9375em) {
@@ -76,7 +83,7 @@ button,
 }
 
 .header nav {
-  padding: 24px;
+  padding: 1.0625rem 1.5rem;
 }
 
 .header__logo img {
@@ -85,11 +92,37 @@ button,
 }
 
 .header__links a {
+  position: relative;
   color: #9698a6;
   font-size: 0.875rem;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 .header__links a:not(:last-child) {
   margin-right: 2rem;
+}
+
+.header__links a::before {
+  position: absolute;
+  content: '';
+  display: block;
+  height: 0.3125rem;
+  background: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+  left: 0;
+  right: 0;
+  bottom: -1.875rem;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.header__links a:hover {
+  color: #2d314d;
+}
+
+.header__links a:hover::before {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
