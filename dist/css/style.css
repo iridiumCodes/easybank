@@ -1,19 +1,71 @@
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    opacity: 0;
+    visibility: visible;
   }
   to {
     opacity: 1;
+    visibility: visible;
   }
 }
 
 @keyframes fade-in {
   from {
     opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    opacity: 0;
+    visibility: visible;
   }
   to {
     opacity: 1;
+    visibility: visible;
   }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 300ms ease-in-out forwards;
+          animation: fade-in 300ms ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.fade-out {
+  -webkit-animation: fade-out 300ms ease-in-out forwards;
+          animation: fade-out 300ms ease-in-out forwards;
 }
 
 html {
@@ -114,11 +166,6 @@ button:hover,
           transform: rotate(-45deg);
 }
 
-.header.open .overlay {
-  -webkit-animation: fade-in 300ms ease-in-out forwards;
-          animation: fade-in 300ms ease-in-out forwards;
-}
-
 .header nav {
   padding: 1.0625rem 1.5rem;
 }
@@ -179,7 +226,7 @@ button:hover,
 }
 
 .header .overlay {
-  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 3.75rem;
   right: 0rem;

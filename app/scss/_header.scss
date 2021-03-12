@@ -11,10 +11,6 @@
     > span:last-child {
       transform: rotate(-45deg);
     }
-
-    .overlay {
-      animation: fade-in 300ms ease-in-out forwards;
-    }
   }
 
   nav {
@@ -78,7 +74,7 @@
     }
   }
   .overlay {
-    opacity: 0;
+    visibility: hidden;
     position: fixed;
     top: 3.75rem;
     right: 0rem;
