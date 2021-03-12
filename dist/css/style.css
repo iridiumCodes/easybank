@@ -82,6 +82,20 @@ button:hover,
   }
 }
 
+.header .open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header .open > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header .open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .header nav {
   padding: 1.0625rem 1.5rem;
 }
@@ -104,20 +118,6 @@ button:hover,
 
 .header__menu > span:not(:last-child) {
   margin-bottom: 0.3125rem;
-}
-
-.header__menu.open > span:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.header__menu.open > span:nth-child(2) {
-  opacity: 0;
-}
-
-.header__menu.open > span:last-child {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 .header__links a {
@@ -153,5 +153,16 @@ button:hover,
 
 .header__links a:hover::before {
   opacity: 1;
+}
+
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 3.75rem;
+  right: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d314d), to(transparent));
+  background-image: linear-gradient(#2d314d, transparent);
 }
 /*# sourceMappingURL=style.css.map */
