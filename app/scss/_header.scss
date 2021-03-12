@@ -13,10 +13,6 @@
     }
   }
 
-  nav {
-    padding: 1.0625rem 1.5rem;
-  }
-
   &__logo {
     img {
       width: 8.8125rem;
@@ -24,7 +20,7 @@
     }
   }
 
-  &__menu {
+  &__toggle {
     //mobile hamburger menu
     > span {
       display: block;
@@ -73,8 +69,30 @@
       }
     }
   }
+
+  &__menu {
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 1.625rem;
+    margin-top: 1.5rem;
+    background: $white;
+    border: $grayishBlue 1px solid;
+    border-radius: 0.5rem;
+
+    a {
+      color: $darkBlue;
+      padding: 0.625rem;
+    }
+  }
+  nav {
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+  }
+
   .overlay {
-    visibility: hidden;
     position: fixed;
     top: 3.75rem;
     right: 0rem;

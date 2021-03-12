@@ -16,6 +16,10 @@ body {
   font-family: 'Public Sans', sans-serif;
   font-size: $font-med;
   color: $grayishBlue;
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 a,
@@ -29,6 +33,10 @@ a:hover {
 .flex {
   display: flex;
 
+  &-vertical {
+    flex-direction: column;
+  }
+
   &-jc-sb {
     justify-content: space-between;
   }
@@ -40,6 +48,11 @@ a:hover {
   &-ai-c {
     align-items: center;
   }
+}
+//Container
+.container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 //Buttons
