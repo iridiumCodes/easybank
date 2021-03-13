@@ -309,8 +309,12 @@ button:hover,
   background-image: linear-gradient(#2d314d, transparent);
 }
 
+.hero {
+  background-color: #fafafa;
+}
+
 @media (min-width: 64em) {
-  .hero {
+  .hero .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

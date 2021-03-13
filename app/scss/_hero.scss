@@ -1,8 +1,11 @@
 .hero {
-  //DESKTOP STYLES FOR HERO
-  @include breakpoint-up(large) {
-    display: flex;
-    align-items: center;
+  background-color: $veryLightGray;
+  .container {
+    //DESKTOP STYLES FOR HERO
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__image {
