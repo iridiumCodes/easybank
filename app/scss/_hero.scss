@@ -1,5 +1,6 @@
 .hero {
   background-color: $veryLightGray;
+
   .container {
     //DESKTOP STYLES FOR HERO
     @include breakpoint-up(large) {
