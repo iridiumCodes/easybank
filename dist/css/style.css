@@ -548,6 +548,8 @@ button:hover,
   .article__grid {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    -webkit-column-gap: 1.875rem;
+            column-gap: 1.875rem;
   }
 }
 
@@ -555,6 +557,29 @@ button:hover,
   .article__grid {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.article__item {
+  border-radius: 0.3125rem;
+  overflow: hidden;
+}
+
+.article__image {
+  height: 12.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.article__text {
+  background-color: white;
+  padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+}
+
+@media (min-width: 40em) {
+  .article__text {
+    padding: 1.875rem 1.5625rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
