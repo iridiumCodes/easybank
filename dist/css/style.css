@@ -130,6 +130,11 @@ h2 {
   }
 }
 
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+}
+
 a,
 a:visited,
 a:hover {
@@ -368,9 +373,9 @@ button:hover,
 
 @media (min-width: 64em) {
   .hero .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -413,31 +418,6 @@ button:hover,
 
 .hero__text {
   text-align: center;
-}
-
-.hero__text h1 {
-  font-size: 2.31rem;
-  font-weight: 300;
-  line-height: 1.15;
-  color: #2d314d;
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width: 64em) {
-  .hero__text h1 {
-    font-size: 3.25rem;
-  }
-}
-
-.hero__text p {
-  line-height: 1.5;
-  margin-bottom: 2.25rem;
-}
-
-@media (min-width: 64em) {
-  .hero__text p {
-    font-size: 1.125rem;
-  }
 }
 
 @media (min-width: 64em) {
