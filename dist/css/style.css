@@ -391,15 +391,10 @@ button:hover,
   background-position: center center;
 }
 
-.hero__image::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-image: url("/images/image-mockups.png");
-  background-size: 94%;
-  background-repeat: no-repeat;
-  background-position: center bottom;
+@media (min-width: 40em) {
+  .hero__image {
+    min-height: 25rem;
+  }
 }
 
 @media (min-width: 64em) {
@@ -411,8 +406,47 @@ button:hover,
         -ms-flex-order: 2;
             order: 2;
     min-height: 41rem;
+    background-image: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__image::before {
+    content: '';
+    width: 150%;
+    height: 100%;
+    position: absolute;
     background-image: url("/images/bg-intro-desktop.svg");
-    background-position: left center;
+    background-size: 127%;
+    background-repeat: no-repeat;
+    background-position: 0% 83%;
+  }
+}
+
+.hero__image::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("/images/image-mockups.png");
+  background-size: 94%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+@media (min-width: 40em) {
+  .hero__image::after {
+    background-size: 46%;
+  }
+}
+
+@media (min-width: 64em) {
+  .hero__image::after {
+    width: 120%;
+    height: 122%;
+    background-size: 94%;
+    background-position: center 150%;
+    left: 22%;
   }
 }
 

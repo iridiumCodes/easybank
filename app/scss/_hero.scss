@@ -17,7 +17,33 @@
     background-repeat: no-repeat;
     background-position: center center;
 
+    @include breakpoint-up(medium) {
+      min-height: 25rem;
+    }
+
+    //DESKTOP STYLES FOR IMAGE
+    @include breakpoint-up(large) {
+      flex: 3;
+      order: 2;
+      min-height: 41rem;
+      background-image: none;
+      //background-position: left center;
+    }
+
     &::before {
+      @include breakpoint-up(large) {
+        content: '';
+        width: 150%;
+        height: 100%;
+        position: absolute;
+        background-image: url('/images/bg-intro-desktop.svg');
+        background-size: 127%;
+        background-repeat: no-repeat;
+        background-position: 0% 83%;
+      }
+    }
+
+    &::after {
       content: '';
       width: 100%;
       height: 100%;
@@ -26,15 +52,18 @@
       background-size: 94%;
       background-repeat: no-repeat;
       background-position: center bottom;
-    }
 
-    //DESKTOP STYLES FOR IMAGES
-    @include breakpoint-up(large) {
-      flex: 3;
-      order: 2;
-      min-height: 41rem;
-      background-image: url('/images/bg-intro-desktop.svg');
-      background-position: left center;
+      @include breakpoint-up(medium) {
+        background-size: 46%;
+      }
+
+      @include breakpoint-up(large) {
+        width: 120%;
+        height: 122%;
+        background-size: 94%;
+        background-position: center 150%;
+        left: 22%;
+      }
     }
   }
 
