@@ -17,6 +17,7 @@ body {
   font-size: $font-sm;
   color: $grayishBlue;
   overflow-x: hidden;
+  min-height: 350vh;
 
   &.noscroll {
     overflow: hidden;
