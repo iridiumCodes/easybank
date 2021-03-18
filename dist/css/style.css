@@ -548,8 +548,7 @@ button:hover,
   .article__grid {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    -webkit-column-gap: 1.875rem;
-            column-gap: 1.875rem;
+    gap: 1.875rem;
   }
 }
 
@@ -563,8 +562,15 @@ button:hover,
 .article__item {
   border-radius: 0.3125rem;
   overflow: hidden;
-  -webkit-box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0rem 0.1875rem 0.875rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0rem 0.1875rem 0.875rem rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.article__item:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
 }
 
 .article__image {
@@ -596,6 +602,10 @@ button:hover,
   line-height: 1.25rem;
   color: #2d314d;
   margin-bottom: 0.5rem;
+}
+
+.article__title:hover {
+  color: #31d35c;
 }
 
 .article__description {
