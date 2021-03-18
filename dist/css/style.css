@@ -575,11 +575,25 @@ button:hover,
 .article__text {
   background-color: white;
   padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+  color: #9698a6;
 }
 
 @media (min-width: 40em) {
   .article__text {
     padding: 1.875rem 1.5625rem;
   }
+}
+
+.article__author {
+  font-size: 0.5rem;
+}
+
+.article__title {
+  font-size: 1rem;
+  color: #2d314d;
+}
+
+.article__description {
+  font-size: 0.625rem;
 }
 /*# sourceMappingURL=style.css.map */
