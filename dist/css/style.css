@@ -266,23 +266,18 @@ button:hover,
   }
 }
 
-.header.open > span:first-child {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.header.open > span:nth-child(2) {
-  opacity: 0;
-}
-
-.header.open > span:last-child {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.header {
+  position: relative;
+  z-index: 1;
 }
 
 .header__logo img {
   width: 8.8125rem;
   height: 1.375rem;
+}
+
+.header__toggle {
+  cursor: pointer;
 }
 
 .header__toggle > span {
@@ -298,6 +293,20 @@ button:hover,
 
 .header__toggle > span:not(:last-child) {
   margin-bottom: 0.3125rem;
+}
+
+.header__toggle.open > span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header__toggle.open > span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__toggle.open > span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .header__links a {
@@ -354,6 +363,7 @@ button:hover,
 }
 
 .header nav {
+  position: relative;
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
 }
